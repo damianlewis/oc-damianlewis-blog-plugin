@@ -15,7 +15,7 @@ class LatestPosts extends ComponentBase
      *
      * @var Collection
      */
-    public $latestPosts;
+    public $posts;
 
     public function componentDetails(): array
     {
@@ -52,7 +52,7 @@ class LatestPosts extends ComponentBase
 
     public function onRun()
     {
-        $this->latestPosts = $this->page['latestPosts'] = $this->getLatestPosts();
+        $this->posts = $this->page['latestPosts'] = $this->getLatestPosts();
     }
 
     /**

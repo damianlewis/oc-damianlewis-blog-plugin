@@ -66,6 +66,7 @@ class Tag extends Model
     protected $fillable = [
         'name'
     ];
+
     /**
      * List of attributes to generate unique slugs for.
      *
