@@ -1,0 +1,31 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/damianlewis/blog/models/category/columns.yaml
+
+# Model Class name
+modelClass: DamianLewis\Blog\Models\Category
+
+# List Title
+title: Manage Post Categories
+
+# JavaScript code to execute when clicking on a record
+recordOnClick: "$.popup({handler: 'onUpdateForm', extraData: {type: 'category', id: ':id'}})"
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Default sorting column
+defaultSort:
+    column: name
+    direction: asc
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: $/damianlewis/blog/controllers/posts/partials/toolbars/_list_categories_toolbar.htm

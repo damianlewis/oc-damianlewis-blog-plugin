@@ -1,0 +1,43 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/damianlewis/blog/models/post/columns.yaml
+
+# Model Class name
+modelClass: DamianLewis\Blog\Models\Post
+
+# List Title
+title: Manage Posts
+
+# Link URL for each record
+recordUrl: damianlewis/blog/posts/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the list column set up button
+showSetup: true
+
+# Default sorting column
+defaultSort:
+    column: created_at
+    direction: desc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: $/damianlewis/blog/controllers/posts/partials/toolbars/_list_posts_toolbar.htm
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt
+
+filter: config_posts_filter.yaml

@@ -1,0 +1,19 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+#    date:
+#        label: Date
+#        type: daterange
+#        conditions: date >= ':after' AND date <= ':before'
+    categories:
+        label: Categories
+        modelClass: DamianLewis\Blog\Models\Category
+        nameFrom: name
+        scope: FilterCategory
+    statuses:
+        label: Statuses
+        modelClass: DamianLewis\Blog\Models\Status
+        nameFrom: name
+        scope: FilterStatus

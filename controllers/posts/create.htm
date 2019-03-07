@@ -1,0 +1,34 @@
+<?= $this->makePartial('partials/form/breadcrumb') ?>
+
+<?php if (!$this->fatalError): ?>
+    <?= Form::open(['class' => 'layout']) ?>
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onSave"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="Creating Post..."
+                    class="btn btn-primary">
+                    Create
+                </button>
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="Creating Post..."
+                    class="btn btn-default">
+                    Create and Close
+                </button>
+                <?= $this->makePartial('partials/form/cancel') ?>
+            </div>
+        </div>
+    <?= Form::close() ?>
+<?php else: ?>
+    <?= $this->makePartial('partials/form/fatal_error') ?>
+<?php endif ?>

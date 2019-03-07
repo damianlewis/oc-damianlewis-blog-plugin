@@ -1,0 +1,34 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post Tag
+
+# Model Form Field configuration
+form: $/damianlewis/blog/models/tag/fields.yaml
+
+# Model Class name
+modelClass: DamianLewis\Blog\Models\Tag
+
+# Default redirect location
+defaultRedirect: damianlewis/blog/tags
+
+# Create page
+create:
+    title: Create Post Tag
+    redirect: damianlewis/blog/categories/update/:id
+    redirectClose: damianlewis/blog/categories
+    flashSave: The post tag has been created successfully.
+
+# Update page
+update:
+    title: Edit Post Tag
+    redirect: damianlewis/blog/categories
+    redirectClose: damianlewis/blog/categories
+    flashSave: The post tag has been updated successfully.
+    flashDelete: The post tag has been deleted successfully.
+
+# Preview page
+preview:
+    title: Preview Post Tag

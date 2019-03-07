@@ -1,0 +1,32 @@
+<?= Form::open() ?>
+    <input type="hidden" name="type" value="<?= $type ?>" />
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title">Create post <?= $type ?></h4>
+    </div>
+
+    <?php if (!$this->fatalError): ?>
+        <div class="modal-body">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="modal-footer">
+            <button
+                type="submit"
+                data-request="onCreateRecord"
+                data-request-data="redirect:0"
+                data-hotkey="ctrl+s, cmd+s"
+                data-popup-load-indicator
+                class="btn btn-primary">
+                <?= e(trans('backend::lang.form.create')) ?>
+            </button>
+
+            <?= $this->makePartial('partials/popup/cancel_button') ?>
+        </div>
+    <?php else: ?>
+        <?= $this->makePartial('partials/popup/fatal_error') ?>
+    <?php endif ?>
+
+    <?= $this->makePartial('partials/popup/timeout') ?>
+<?= Form::close() ?>

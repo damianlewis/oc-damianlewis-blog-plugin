@@ -1,0 +1,45 @@
+<div class="control-tabs content-tabs tabs-flush" data-control="tab">
+    <ul class="nav nav-tabs">
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_posts')): ?>
+            <li class="active"><a href="#posts">Posts</a></li>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_categories')): ?>
+            <li><a href="#categories">Categories</a></li>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_tags')): ?>
+            <li><a href="#tags">Tags</a></li>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_statuses')): ?>
+            <li><a href="#statuses">Statuses</a></li>
+        <?php endif ?>
+    </ul>
+
+    <div class="tab-content">
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_posts')): ?>
+            <div class="tab-pane active">
+                <?= $this->listRender('posts') ?>
+            </div>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_categories')): ?>
+            <div class="tab-pane">
+                <?= $this->listRender('categories') ?>
+            </div>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_tags')): ?>
+            <div class="tab-pane">
+                <?= $this->listRender('tags') ?>
+            </div>
+        <?php endif ?>
+
+        <?php if ($this->user->hasAccess('damianlewis.blog.access_statuses')): ?>
+            <div class="tab-pane">
+                <?= $this->listRender('statuses') ?>
+            </div>
+        <?php endif ?>
+    </div>
+</div>

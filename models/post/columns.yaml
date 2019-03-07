@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Title
+        searchable: true
+    published_at:
+        label: Published
+        type: date
+        format: D, jS M Y
+    category:
+        label: Category
+        relation: category
+        select: name
+    status:
+        label: Status
+        relation: status
+        select: name
+        type: partial
+        path: $/damianlewis/blog/controllers/posts/partials/columns/_status.htm

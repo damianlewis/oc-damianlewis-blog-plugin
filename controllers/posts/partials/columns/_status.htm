@@ -1,0 +1,15 @@
+<?php if ($value == 'Draft'): ?>
+    <span class="oc-icon-pencil text-info">
+        <?= $value ?>
+    </span>
+<?php elseif ($value == 'Published'): ?>
+    <span class="oc-icon-check text-success">
+        <?= $value ?>
+    </span>
+<?php elseif ($value == 'Archived'): ?>
+    <span class="oc-icon-archive text-muted">
+        <?= $value ?>
+    </span>
+<?php else: ?>
+    <span><?= $value ?></span>
+<?php endif ?>

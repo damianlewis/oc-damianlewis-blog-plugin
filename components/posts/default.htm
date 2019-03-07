@@ -1,0 +1,13 @@
+<h1>Blog posts</h1>
+
+{% if __SELF__.posts is not empty %}
+    <ul>
+        {% for post in __SELF__.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts were found.</p>
+{% endif %}

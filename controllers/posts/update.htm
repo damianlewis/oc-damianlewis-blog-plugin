@@ -1,0 +1,42 @@
+<?= $this->makePartial('partials/form/breadcrumb') ?>
+
+<?php if (!$this->fatalError): ?>
+    <?= Form::open(['class' => 'layout']) ?>
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onSave"
+                    data-request-data="redirect:0"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="Saving Post..."
+                    class="btn btn-primary">
+                    <u>S</u>ave
+                </button>
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="Saving Post..."
+                    class="btn btn-default">
+                    Save and Close
+                </button>
+                <button
+                    type="button"
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="Deleting Post..."
+                    data-request-confirm="Delete this post?">
+                </button>
+                <?= $this->makePartial('partials/form/cancel') ?>
+            </div>
+        </div>
+    <?= Form::close() ?>
+<?php else: ?>
+    <?= $this->makePartial('partials/form/fatal_error') ?>
+<?php endif ?>

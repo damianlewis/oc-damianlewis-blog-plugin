@@ -1,0 +1,13 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+    posts_count:
+        label: Posts
+        type: number
+        relation: posts
+        useRelationCount: true
+        default: 0

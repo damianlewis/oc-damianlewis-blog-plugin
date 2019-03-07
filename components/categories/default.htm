@@ -1,0 +1,14 @@
+<h1>Blog categories</h1>
+
+{% if __SELF__.categories is not empty %}
+    <ul>
+        {% for category in __SELF__.categories %}
+            <li {% if category.slug == currentCategorySlug %}class="active"{% endif %}>
+                <a href="{{ category.url }}">{{ category.name }}</a>
+                <span class="badge">{{ category.postCount }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No categories were found.</p>
+{% endif %}

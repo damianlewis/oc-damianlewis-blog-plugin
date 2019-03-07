@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/damianlewis/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: DamianLewis\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: damianlewis/blog/posts
+
+# Create page
+create:
+    title: Create Post
+    redirect: damianlewis/blog/posts/update/:id
+    redirectClose: damianlewis/blog/posts
+
+# Update page
+update:
+    title: Edit Post
+    redirect: damianlewis/blog/posts
+    redirectClose: damianlewis/blog/posts
+
+# Preview page
+preview:
+    title: Preview Post

@@ -1,0 +1,9 @@
+<h1>Latest posts</h1>
+
+<ul>
+    {% for post in __SELF__.latestPosts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,73 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Title
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: right
+        context:
+            - update
+            - preview
+        preset: title
+        type: text
+    category:
+        label: Category
+        span: left
+        type: relation
+        nameFrom: name
+    excerpt:
+        label: Excerpt
+        span: full
+        type: textarea
+        size: small
+tabs:
+    fields:
+        body:
+            tab: Body
+            label: Copy
+            span: full
+            type: richeditor
+            toolbarButtons: paragraphFormat|||bold|italic|||undo|redo|||insertLink|fullscreen
+            size: giant
+        featured_image:
+            tab: Images
+            label: Featured Image
+            span: left
+            type: mediafinder
+            mode: image
+        featured_image_title:
+            tab: Images
+            label: Featured image title
+            span: right
+            type: text
+        featured_image_description:
+            tab: Images
+            label: Featured image description
+            span: right
+            type: textarea
+            size: small
+        status:
+            tab: Manage
+            label: Status
+            span: left
+            type: relation
+            nameFrom: name
+        published_at:
+            tab: Manage
+            label: Published Date
+            span: right
+            type: datepicker
+            mode: date
+            format: jS M Y
+            default: now
+        tags:
+            tab: Manage
+            label: Tags
+            type: taglist
+            mode: relation
+            nameFrom: name
