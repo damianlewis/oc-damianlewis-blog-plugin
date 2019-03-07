@@ -1,4 +1,5 @@
 # Blog Plugin
+Provides blogging features for OctoberCMS.
 
 ### Post list
 The `blogPosts` component can be used to display a paginated list of posts. The default value is **{{ :page }}** to obtain the value from the route parameter `:page`.
