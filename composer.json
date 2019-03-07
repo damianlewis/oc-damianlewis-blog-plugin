@@ -6,7 +6,8 @@
     "authors": [
         {
             "name": "Damian Lewis",
-            "email": "damian@damianlewis.co.uk"
+            "email": "damian@damianlewis.co.uk",
+            "role": "Developer"
         }
     ],
     "require": {

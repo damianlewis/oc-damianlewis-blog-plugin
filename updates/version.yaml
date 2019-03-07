@@ -1,4 +1,4 @@
-1.0.1:
+1.0.0:
     - Create Posts, Categories, Tags and Statuses tables
     - create_categories_table.php
     - create_statuses_table.php
