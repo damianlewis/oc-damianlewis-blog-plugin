@@ -12,7 +12,7 @@ use System\Classes\PluginBase;
 class Plugin extends PluginBase
 {
 
-    public function pluginDetails()
+    public function pluginDetails(): array
     {
         return [
             'name'        => 'Blog',
