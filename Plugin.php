@@ -39,7 +39,7 @@ class Plugin extends PluginBase
     public function registerPermissions(): array
     {
         return [
-            'damianlewis.blog.access_post'       => [
+            'damianlewis.blog.access_posts'      => [
                 'tab'   => 'Blog',
                 'label' => 'Manage the posts',
                 'order' => 101,
