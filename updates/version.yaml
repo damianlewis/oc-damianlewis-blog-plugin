@@ -7,3 +7,5 @@
     - seed_post_statuses.php
 1.0.1:
     - Fixed authorisation bug for posts list
+1.1.0:
+    - Updated component partial and added more buttons to rich editor
