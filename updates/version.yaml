@@ -9,3 +9,5 @@
     - Fixed authorisation bug for posts list
 1.1.0:
     - Updated component partial and added more buttons to rich editor
+1.2.0:
+    - Allow files to be included with posts
