@@ -5,4 +5,3 @@
     - create_posts_table.php
     - create_tags_table.php
     - seed_post_statuses.php
-

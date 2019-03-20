@@ -66,7 +66,6 @@ class Post extends Model
             'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i',
         ],
         'body'         => 'required',
-        'category'     => 'required',
         'status'       => 'required',
         'published_at' => 'required',
     ];
@@ -82,7 +81,6 @@ class Post extends Model
         'slug.unique'           => 'The updated slug needs to be unique.',
         'slug.regex'            => 'The slug format is invalid. It needs to be URL friendly.',
         'body.required'         => 'The body content for the post is required.',
-        'category.required'     => 'The category for the post needs to be set.',
         'status.required'       => 'The status for the post needs to be set.',
         'published_at.required' => 'A published date is required for the post.',
     ];
@@ -93,6 +91,7 @@ class Post extends Model
      * @var array
      */
     protected $nullable = [
+        'category_id',
         'featured_image',
         'featured_image_title',
         'featured_image_description',

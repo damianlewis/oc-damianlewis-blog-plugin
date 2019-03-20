@@ -14,7 +14,7 @@ class CreatePostsTable extends Migration
         Schema::create('damianlewis_blog_posts', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('category_id')->unsigned();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->integer('status_id')->unsigned();
             $table->string('title');
             $table->string('slug')->unique()->index();
@@ -30,7 +30,7 @@ class CreatePostsTable extends Migration
                 ->references('id')
                 ->on('damianlewis_blog_categories')
                 ->onUpdate('cascade')
-                ->onDelete('restrict');
+                ->onDelete('set null');
             $table->foreign('status_id')
                 ->references('id')
                 ->on('damianlewis_blog_statuses')

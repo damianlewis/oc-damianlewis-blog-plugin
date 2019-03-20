@@ -89,18 +89,14 @@ class Category extends Model
     }
 
     /**
-     * Checks whether the blog category can be deleted. Categories should not be deleted whilst a post is
-     * attached to it.
+     * Checks whether the blog category can be deleted. Categories are optional. Make sure a foreign key constraint is
+     * in place to set the category id on the posts attached to this category to null.
      *
      * @return bool
      */
     public function isDeletable(): bool
     {
-        if ($this->posts()->count() === 0) {
-            return true;
-        }
-
-        return false;
+        return true;
     }
 
     /**

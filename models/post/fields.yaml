@@ -20,6 +20,7 @@ fields:
         span: left
         type: relation
         nameFrom: name
+        emptyOption: Uncategorised
     excerpt:
         label: Excerpt
         span: full
