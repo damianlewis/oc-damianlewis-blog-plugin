@@ -33,7 +33,7 @@ tabs:
             label: Copy
             span: full
             type: richeditor
-            toolbarButtons: paragraphFormat|||bold|italic|quote|align|||undo|redo|||formatOL|formatUL|||insertLink|insertImage,insertFile|insertTable|fullscreen
+            toolbarButtons: paragraphFormat|||bold|italic|quote|align|||undo|redo|||formatOL|formatUL|||insertLink|insertImage|insertFile|insertTable|||html|fullscreen
             size: giant
         featured_image:
             tab: Images
