@@ -58,16 +58,19 @@ class Post extends Model
      * @var array
      */
     public $rules = [
-        'title'        => 'required',
-        'slug'         => [
+        'title'          => 'required',
+        'slug'           => [
             'sometimes',
             'required',
             'unique:damianlewis_blog_posts',
             'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i',
         ],
-        'body'         => 'required',
-        'status'       => 'required',
-        'published_at' => 'required',
+        'body'           => 'required',
+        'featured_image' => [
+            'regex:/^([a-zA-Z0-9_\\.\-\(\)\/])+(.jpg|.jpeg|.png)$/i',
+        ],
+        'status'         => 'required',
+        'published_at'   => 'required',
     ];
 
     /**
@@ -81,6 +84,7 @@ class Post extends Model
         'slug.unique'           => 'The updated slug needs to be unique.',
         'slug.regex'            => 'The slug format is invalid. It needs to be URL friendly.',
         'body.required'         => 'The body content for the post is required.',
+        'featured_image.regex'  => 'The featured image filename is invalid. It needs to be URL friendly.',
         'status.required'       => 'The status for the post needs to be set.',
         'published_at.required' => 'A published date is required for the post.',
     ];
